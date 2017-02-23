@@ -20,7 +20,7 @@ class UserManager(models.Manager):
             errormsg.append('email is already in the database')
             status = False
         if not EMAIL_REGEX.match(args[2]):
-            errormsg.append('email invalid')
+            errormsg.append('email is invalid search google for a correct format ')
             status = False
         if len(args[3]) < 8:
             errormsg.append('password needs to be longer than 8 character')
