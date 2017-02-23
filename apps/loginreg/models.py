@@ -11,7 +11,7 @@ class UserManager(models.Manager):
         errormsg = []
         status = True
         if not NAME_RE.match(args[0]):
-            errormsg.append('invalid first name, boohoo')
+            errormsg.append('invalid first name .bbooo')
             status = False
         if not NAME_RE.match(args[1]):
             errormsg.append('invalid last name')
