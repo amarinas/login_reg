@@ -36,6 +36,7 @@ def login(request):
 
 def process(request):
     if 'userid' not in request.session:
+        messages.error(request, "please login cheater")
         return redirect('/')
     context = {'loguser': Users.objects.get(id=request.session['userid'])}
     return render(request, 'loginreg/success.html', context)

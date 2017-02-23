@@ -11,10 +11,10 @@ class UserManager(models.Manager):
         errormsg = []
         status = True
         if not NAME_RE.match(args[0]):
-            errormsg.append('invalid first name .booooo')
+            errormsg.append('first name need to be 2 character long no numbers and not empty .booooo')
             status = False
         if not NAME_RE.match(args[1]):
-            errormsg.append('invalid last name, booooo')
+            errormsg.append('Last name need to be 2 character long no numbers and not empty .booooo')
             status = False
         if len(Users.objects.filter(email=args[2])) > 0:
             errormsg.append('email is already in the database')
